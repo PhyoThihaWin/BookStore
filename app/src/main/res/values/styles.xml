@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="AlertDialogAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+    </style>
+    <style name="customizedAlert" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_round</item>
+        <item name="android:windowAnimationStyle">@style/AlertDialogAnim</item>
+    </style>
+
 </resources>

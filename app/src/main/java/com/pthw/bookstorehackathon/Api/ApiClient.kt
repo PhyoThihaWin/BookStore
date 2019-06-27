@@ -10,7 +10,7 @@ class ApiClient {
 
     companion object {
 
-        val BASE_URL = "http://192.168.65.112/bookstore_project/"
+        val BASE_URL = "http://192.168.43.228/bookstore_project/"
         var retrofit: Retrofit? = null
 
         //Here we are using the GsonConverterFactory to directly convert json data to object

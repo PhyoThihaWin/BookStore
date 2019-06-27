@@ -1,7 +1,11 @@
 package com.pthw.bookstorehackathon
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,6 +19,10 @@ import kotlinx.android.synthetic.main.recycler_content.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.File.separator
+import okhttp3.ResponseBody
+import java.io.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,4 +65,24 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    // actions on click menu items
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.login -> {
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
+
+    }
+
 }

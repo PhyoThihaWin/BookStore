@@ -7,5 +7,9 @@ data class Book(
     val description: String,
     val author_id: String,
     val publisher_id: String,
-    val genre_id: String
+    val genre_id: String,
+    val author: Author,
+    val publisher: Publisher,
+    val genre: Genre,
+    val pdf: String
 )
